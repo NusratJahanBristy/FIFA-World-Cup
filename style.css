@@ -10,7 +10,6 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-
 .container{
     width: 80%;
     Height: 558px;
@@ -21,21 +20,20 @@ body{
     align-items: center;
     margin: 0 auto;
     margin-top: 30px;
-    /* margin: 30px 60px 0px 60px; */
-    /* margin-left: 60px; */
+    transition: width 2s linear 1s;
+}
+.container:hover{
+    width: 90%;
 }
 .header-info{
     width: 42%;
-    padding-left: 60px;
-    
-    
+    padding-left: 60px;  
 }
 .header-title{
     font-family: 'Poppins';
     font-weight: 700;
     font-size: 60px;
-    color: #FFFFFF;
-    
+    color: #FFFFFF;   
 }
 .header-text{
     font-family: 'Poppins';
@@ -58,20 +56,16 @@ body{
     border-radius: 5px;
     border: none;
     margin-top: 20px;
-
 }
 .header-img img{
     width: 80%;
 }
-
-
 /* article section  */
 .article-section{
     width: 80%;
     display: flex;
     justify-items: center;
     margin-top: 50px;
-  
 }
 .side-nav{
     width: 25%;
@@ -79,29 +73,36 @@ body{
 .sidebar{
     width: 100%;
     height: 312px;
-    /* margin-left: 80px; */
     background: #161616;
     border-radius: 10px;
     display: flex;
     align-items: center;  
     flex-direction: column;
-    
 }
 .flexible-sidebar{
     font-family: 'Poppins';
     font-weight: 500;
     font-size: 20px;
-    color: #161616;
     width: 220px;
     height: 64px;
     background: #FFFFFF;
     border-radius: 10px;
+    border: none;
     margin: 12px;
 }
-.active{
+.flexible-sidebar a{
+    text-decoration: none;
+    color: black;
+}
+.flexible-sidebar a:hover{
+    cursor: pointer;
+}
+ .active{
     background: #DD0000;
-    border-radius: 10px;
     color: white;
+}
+.flexible-sidebar a.active{
+   color: white;
 }
 .article-section{
     display: flex;
@@ -156,7 +157,8 @@ body{
     border-radius: 10px;
     padding: 30px;
 }
-.flage-img{ display: flex;
+.flage-img{ 
+    display: flex;
 }
 
 .flage-img h5{
@@ -166,6 +168,7 @@ body{
     padding: 0 5px;
     text-align: center;
     color: #161616;
+    padding-top: 15px;
 }
 .flag-info{
     padding-top: 20px;
@@ -184,27 +187,26 @@ body{
     text-align: center;
     color: #4D4D4D;
 }
-/* view-all */
+/* view-all button */
 .view-all{
     text-align: center;
     margin-top: 50px;
     display: none;
 }
 .view-all button{
-padding: 12px 29px;
-font-family: 'popins';
-font-weight: 400;
-font-size: 20px;
-text-align: center;
-color: #FFFFFF;
-background: #DD0000;
-border-radius: 5px;
-border: none;
+    padding: 12px 29px;
+    font-family: 'popins';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #DD0000;
+    border-radius: 5px;
+    border: none;
 }
 
 /* footer */
 .footer{
-/* height: 350px; */
     background: #161616;
     margin-top: 60px;
 }
@@ -230,15 +232,16 @@ border: none;
     font-size: 16px;
     color: #B9B9B9;
 }
+/* footer social icons  */
 .social-icons{
     text-align: center;
 }
 .social-icons .icon {
     font-size: 25px;
     color: #B9B9B9;
-    margin: 30px;
-    
+    margin: 30px;   
 }
+/* media query for responsive  */
 @media only screen and (max-width:688px){
     .container{
         Height: 541px;
@@ -283,12 +286,6 @@ border: none;
     .flags{
         grid-template-columns: repeat(1,1fr);
     }
-    .active{
-        border: none;
-    }
-   .footer{
-        /* height:px; */
-   }
     .footer-info{
         flex-direction: column;
         align-items: center;
@@ -299,35 +296,7 @@ border: none;
     }
     
 }
-
-
-
-
-
-/* @media only screen and (min-width:688px) and(max-width:992px){
-    .container{
-        width: 100%;
-        Height: 541px;
-        flex-direction: row;
-    }
-    .view-all{
-        display:block;
-    }
-    } */
-
-   
-
-
-
-
-
-
-
-
-/* 
-    
-@media only screen and (min-width: 768px) {*/
-    @media screen and (max-width: 900px) and (min-width: 688px) {
+@media screen and (max-width: 900px) and (min-width: 688px) {
     .header-title{
         font-size: 40px;
     }
@@ -342,12 +311,10 @@ border: none;
     }
     .side-nav{
         width: 100%;
-        
     }
     .sidebar{
         background-color: white;
         flex-direction: row;
-        /* margin-left: 110px; */
     }
     .flexible-sidebar{
         border: 1px solid #E8E8E8;
@@ -363,13 +330,8 @@ border: none;
         margin-left: 110px;
         margin-top: 0;
     }
-
-     
     .flags{
         grid-template-columns: repeat(1,1fr);
-    }
-    .active{
-        border: none;
     }
    .footer{
         height:px;
